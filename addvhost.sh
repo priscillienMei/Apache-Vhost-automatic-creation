@@ -37,5 +37,3 @@ if [ "$EUID" -ne 0 ]
        fi
 fi
 
-a2ensite $1.conf
-service apache2 restart
