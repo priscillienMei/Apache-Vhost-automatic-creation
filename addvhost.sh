@@ -27,8 +27,8 @@ if [ "$EUID" -ne 0 ]
         SetHandler \"proxy:unix:/var/run/php/php7.4-fpm.sock|fcgi://localhost\"
  </FilesMatch>
 
-    ErrorLog \${APACHE_LOG_DIR}/$1_error.log
-    CustomLog \${APACHE_LOG_DIR}/$1_access.log combined
+    ErrorLog ${APACHE_LOG_DIR}/$1_error.log
+    CustomLog ${APACHE_LOG_DIR}/$1_access.log combined
 
  </VirtualHost>' > /etc/apache2/sites-available/$1.conf
     sudo a2ensite $1
