@@ -8,6 +8,9 @@ if [ "$EUID" -ne 0 ]
            then
                echo "Please enter the name for the virtual host"
            else
+           
+ mkdir /var/www/$1
+ 
  sudo echo '<VirtualHost *:80>
  ServerName '$1'
  ServerAlias 'www.$1'
@@ -33,3 +36,6 @@ if [ "$EUID" -ne 0 ]
     echo "Your virtual host $1 has been set up"
        fi
 fi
+
+a2ensite $1.conf
+service apache2 restart
