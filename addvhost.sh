@@ -3,6 +3,9 @@
 # [X] add choice is www or not as ServerAlias
 # [X] Ask for letsencrypt SSL certificate creation
 # [X] If not asked for www as server alias do not generate www cert
+# [ ] Create NGINX VERSION
+# [ ] Ask fpm or not
+# [ ] Ask Php Version
 #
 
 EMAIL="email@domain.com"
